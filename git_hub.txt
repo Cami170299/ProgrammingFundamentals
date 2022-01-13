@@ -1,0 +1,79 @@
+Git Hub / Git 
+
+Git is a control command line tool.
+
+You have to install Git on your computer. 
+
+Configuring Git
+
+You can configure git in 3 level
+
+1. System, change to all users 
+2. Global, change just the rep and the current user
+3. Local, Just the Curren rep. 
+
+Setting GIT
+
+-git config - - global user.name ¨Camilo Sierra¨
+-git config - - global user.email yes@email.com
+-git config - - global core.editor ¨code - - wait¨
+-git config  - -global core.autocrlf (here it could be either INPUT for Mac users or TRUE for windows users.)
+
+To start a repository first we have to use the command
+
+	- git clone HTTP: which is going to allow us to download a repository (Folder) in hour own computer.
+
+After modifying the code or creating a new file on the file of the repository. 
+
+	-git add name.html : it save the file to keep track on git and save it int4ead of all the documents you are working on. 
+	-git add . = you will add all the file with an extension, same as -git *.html
+
+After saving the track with got add Name.file you have to use 
+
+	- git commit -m  “message” : it will update and save the code updated on the repository command.
+This will be known also as a SNAPSHOT.
+
+And at the end you will have to use 
+
+	- git push : to actually change the repository online. 
+	-git pull : get the lates version of the file on your local version.
+
+	-git log: to look all the commit on you file since start. 
+	-git reset  - - hard <commit code>: use this to reset or recover a previous uploaded commit. For a bug or mistake. 
+	-git ls-files : you will be able to see the info in the stage just before committing.
+	-git status.: allow you to see the status of your branch and file with the rep.
+
+
+.gitignore you create this file to inside put the files you want GitHub to ignore.
+
+Branching.
+
+how to branch.
+
+You have two types. 
+
+	Master
+	Feature
+
+Git branch -a: shows a list of all the branches.
+Git branch: tells you in what branch of the repository you are in.
+Git checkout -b name_branch : to create a new branch.
+Git checkout name_branch: You can switch branches.     
+Git merge name_branch: merge the branches on the head that you are on. 
+Git branch -d name_branch : to delete the branch created
+
+Creating a SSH key pair.
+
+In order to create an SSH pair first write this in command
+
+ssh-keygen -t rsa -b 4096 -C "sierra170299camilo@gmail.com"
+
+Then you create a phrase to secure the process and you will need to user forward in the operation, after you write
+
+eval $(ssh-agent -s)
+
+And after
+
+Ssh-add  /* the path of where you safe the key being a SU */
+
+Then you go to the file .ssh and open the id_rsa.pub, then you copy the key of the paste it on GitHub setting > SSH key 
