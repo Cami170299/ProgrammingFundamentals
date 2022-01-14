@@ -36,6 +36,7 @@ And at the end you will have to use
 
 	- git push : to actually change the repository online. 
 	-git pull : get the lates version of the file on your local version.
+	- git fetch to view if something has been upload but you dont want to pull it and change your files. 
 
 	-git log: to look all the commit on you file since start. 
 	-git reset  - - hard <commit code>: use this to reset or recover a previous uploaded commit. For a bug or mistake. 
