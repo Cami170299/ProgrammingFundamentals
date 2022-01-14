@@ -76,4 +76,4 @@ And after
 
 Ssh-add  /* the path of where you safe the key being a SU */
 
-Then you go to the file .ssh and open the id_rsa.pub, then you copy the key of the paste it on GitHub setting > SSH key 
+Then you go to the file .ssh and open the id_rsa.pub, then you copy the key of the paste it on GitHub setting > SSH key.
