@@ -1,0 +1,120 @@
+
+/*CSS FUNDAMENTALS*/
+
+.outline{
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid black;
+    outline: 5px solid red;
+    outline-offset: 10px;
+}
+p.uppercase {
+    text-transform: uppercase;
+  }
+  
+  p.lowercase {
+    text-transform: lowercase;
+  }
+  
+  p.capitalize {
+    text-transform: capitalize;
+  }
+.text-aligment-pro {
+    text-align: justify; /*this will justify the text to the width of the conainer*/
+    text-align-last: justify; /*this will strech all the text to fit perfectly the full width of the container*/
+}
+.spacing-tab-indent{
+    text-indent: 50px;
+}
+.shadow-text {
+    color: rgb(192, 192, 192);
+    text-shadow: 5px 5px 6px rgb(63, 63, 63);
+}
+.shadow-text2 {
+    color: rgb(0, 0, 0);
+    text-shadow: 0px 0px 5px rgb(255, 0, 0);
+}
+
+/*RWD RESPONSIVE WEB DESIG*/
+
+.responsive-text{
+    font-size: 2vw;
+}
+
+/*flex*/
+
+.flex-container{
+    background-color: darkorange;
+    display: flex;
+    /*flex-direction: column;  invert the main and cross x's */
+    /*flex-wrap: wrap; this is used to wrap the container elements */
+
+    /*justify-content: center; You use it to diplay content horizontally*/
+    /*justify-content: space-between;
+    justify-content: space-around;*/
+
+    /*align-items: flex-start; You use it to diplay content vertically*/
+    /*align-content: center; You use it to diplay content vertically on flex wrap*/
+    /*align-items: center;
+    align-content: flex-end;
+    align-content: space-between;*/
+}
+.flexbox{
+    width: 200px;
+    margin: 10px;
+    border: 3px solid black;
+    background-color: lightslategray ;
+}
+.flexboc-item1{
+    min-height: 100px;
+    /*flex-shrink: 0; this item won shrnk or responce to the display size.*/
+    /*flex-grow: 1; this will take the free space of the container.*/
+    /*flex-basis: 0px; so it will take this point to grow the since for the free space applyed*/
+    flex: 1 0 0px; /*this is a shurtcut to put the grow shrink and basis */
+}
+.flexboc-item2{
+    min-height: 200px;
+    flex: 1 0 0px;
+}
+.flexboc-item3{
+    min-height: 300px;
+    flex: 1 0 0px;
+}
+
+/*GRID*/
+
+.grid-item{
+    background-color: mediumaquamarine;
+    border: solid 1px darkslategray;
+    min-height: 100px;
+    color: black;
+    font-size: 2vw;
+    text-align-last: justify;
+}
+
+.grid-container{
+    background-color: rgb(93, 93, 93);
+    margin: 0px;
+    min-height: 700px;
+    display: grid;
+    grid-template-columns: repeat(2, 250px);
+    /*grid-template-rows: repeat(5 ,1fr); used for setting the number of rows.*/
+    grid-auto-rows: minmax(150px ,150px); /*you will able to set a new min and max height for each row yoou put 
+                you can put auto  ^ here to align it.  */
+    /*grid-row-gap: 20px;
+    grid-column-gap: 10px;  setting the gap indivicualy. */
+    grid-gap: 20px;
+    /*grid-template-areas: 
+    "header header"
+    "sider1 sider2" this is the way of how you can distribute the grid container
+    "sider4 sider2"
+    "sider5 sider5" 
+    in each item you put ex: grid-area: sider5;
+    ; */
+    justify-content: space-around;
+    align-content: space-around;
+}
+    /*grid-column: span 2;
+    grid-row: span 2; this is used to span the set of out grid and add the space we want for each item */
+
+
