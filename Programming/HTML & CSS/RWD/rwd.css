@@ -1,3 +1,7 @@
+body{
+    min-height: 5000px
+}
+
 
 /*CSS FUNDAMENTALS*/
 
@@ -117,4 +121,47 @@ p.uppercase {
     /*grid-column: span 2;
     grid-row: span 2; this is used to span the set of out grid and add the space we want for each item */
 
+/*POSITIONS*/
 
+.containerposition{
+    background-color: rgb(141, 232, 255);
+    min-height: 500px;
+    position: relative;
+}
+.child1{
+    width: 90%;
+    margin-left: 5%;
+    min-height: 90px;
+    background-color: brown;
+    position: absolute;
+    top: 0;
+}
+.child2{
+    width: 20%;
+    margin-left: 5%;
+    min-height: 90px;
+    background-color: yellowgreen;
+    position: relative;
+    right: 15px;
+}
+.child3{
+    width: 90%;
+    margin-left: 5%;
+    min-height: 90px;
+    background-color: blueviolet;
+    position: fixed;
+}
+ /*STICKY POSITION */
+
+ .list-sticky{
+    margin-left: 25%;
+    width: 50%;
+    background-color: rgb(225, 194, 255);
+ }
+ .titlea,.titleb,.titlec,.titled{
+     background-color: rgb(49, 18, 78);
+     color: white;
+     text-align: center;
+     position: sticky;
+     top: 0;
+ }
