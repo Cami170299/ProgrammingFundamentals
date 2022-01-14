@@ -1,5 +1,5 @@
 
-Git is a control command line tool.
+Git is a control command line tool for developers
 
 You have to install Git on your computer. 
 
