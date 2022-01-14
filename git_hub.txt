@@ -77,3 +77,5 @@ And after
 Ssh-add  /* the path of where you safe the key being a SU */
 
 Then you go to the file .ssh and open the id_rsa.pub, then you copy the key of the paste it on GitHub setting > SSH key.
+
+When in the origin you have 2 diferent branches you can download them with -git fetch origin and pull, then you are able to switch to the other branch and modify it. 
