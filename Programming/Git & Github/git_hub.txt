@@ -61,7 +61,7 @@ Git checkout name_branch: You can switch branches.
 Git merge name_branch: merge the branches on the head that you are on. 
 Git branch -d name_branch : to delete the branch created
 
-Creating a SSH key pair.
+Creating a SSH key pair.(Secure Sell pair key).
 
 In order to create an SSH pair first write this in command
 
