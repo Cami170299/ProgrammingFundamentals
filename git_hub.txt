@@ -1,4 +1,3 @@
-Git Hub / Git 
 
 Git is a control command system line tool used for programming projects.
 
