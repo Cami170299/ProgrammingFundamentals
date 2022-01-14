@@ -1,6 +1,6 @@
 Git Hub / Git 
 
-Git is a control command line tool.
+Git is a control command system line tool used for programming projects.
 
 You have to install Git on your computer. 
 
