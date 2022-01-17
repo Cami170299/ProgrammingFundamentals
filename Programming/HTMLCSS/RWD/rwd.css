@@ -124,6 +124,7 @@ p.uppercase {
 /*POSITIONS*/
 
 .containerposition{
+    /*position: static; is the default*/
     background-color: rgb(141, 232, 255);
     min-height: 500px;
     position: relative;
@@ -133,23 +134,26 @@ p.uppercase {
     margin-left: 5%;
     min-height: 90px;
     background-color: brown;
-    position: absolute;
-    top: 0;
+    position: absolute; /*Completele removes it from the file and you are able to modify it 
+    with from de very top of the container parent.*/
+    top: 0; /*noice taht even with a top 0 the absolute element do not get to the top of the page 
+    as fixed positioning, but instead gets to the top of the parent container. */
 }
 .child2{
     width: 20%;
     margin-left: 5%;
     min-height: 90px;
     background-color: yellowgreen;
-    position: relative;
+    position: relative; /*acts exactly the same as static but you can change the top,
+    button,left nad right setting by pixels*/
     right: 15px;
 }
 .child3{
     width: 90%;
-    margin-left: 5%;
     min-height: 90px;
     background-color: blueviolet;
-    position: fixed;
+    position: static;
+    /*position: fixed; will put hte element at the top of the page if it has a  top: 0px;*/
 }
  /*STICKY POSITION */
 
@@ -165,3 +169,37 @@ p.uppercase {
      position: sticky;
      top: 0;
  }
+ 
+ /* Z INDEX */
+
+.zindez-container{
+    margin-left: 25%;
+    width: 50%;
+    background-color: coral;
+    min-height: 200px;
+}
+
+ .z-item {
+ min-height: 200px;
+ max-width: 200px;
+ border: solid 3px black;
+ position: relative;
+ }
+ .z-one{
+    background-color: darkolivegreen;
+    left: 200px;
+    z-index: 1; /*with the z-index i am able to specify the order of which the element are 
+    beign display and which onegoes upon the other.*/
+ }
+ .z-two{
+    background-color:rgb(177, 34, 34);
+    left: 300px;
+    top: -100px;
+    z-index: 3;
+ }
+ .z-three{
+    background-color: rgb(21, 10, 58);    
+    left: 400px; 
+    top: -200px;
+    z-index: 2;
+}
