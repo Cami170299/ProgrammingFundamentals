@@ -16,7 +16,8 @@ Setting GIT
 -git config - - global user.name ¨Camilo Sierra¨
 -git config - - global user.email yes@email.com
 -git config - - global core.editor ¨code - - wait¨
--git config  - -global core.autocrlf (here it could be either INPUT for Mac users or TRUE for windows users.)
+-git config - - global core.autocrlf (here it could be either INPUT for Mac users or TRUE for windows users.)
+-git config -l (where will show the configuration you had put so far)
 
 To start a repository first we have to use the command
 
