@@ -364,3 +364,78 @@ p.uppercase {
 .itemwork:hover{
     box-shadow: 5px 5px 6px rgb(63, 63, 63);
 }
+/*FORMS FOCUS PROPERTY*/
+
+.formfocus{
+background-color: blueviolet;
+max-width: 20%;
+margin: auto;
+display: grid;
+margin-top: 20px;
+min-height: 200px;
+}
+.formfocus label{
+    color: white;
+}
+.formfocus input{
+    max-width: 80%;
+}
+.formfocus input:focus{ /*WHen you click on it it will take the properties as below*/
+    max-width: 100%;  
+    transition-duration: 0.4s;
+}
+
+/*COUNTERS*/
+
+body {
+    counter-reset: programmincounter; /*here i am setting the counter with a specific name*/
+}
+.counters{
+    text-align: center;
+}
+.counters h1::before{
+    counter-increment: programmincounter;/*Here I call the caunter to take action and execute the
+    content below.*/
+    content: "Section "counter(programmincounter)": ";
+}
+
+/*MATH FUNCTIONS*/
+
+.math .calc{
+ background-color: red;
+ width: calc(100% - 100px);
+}
+.math .min{
+ background-color: blue;
+ width: min(100px , 50%);
+}
+.math .max{
+ background-color: blueviolet;
+ width: max(50px, 100%);
+}
+
+
+/*GRADIANTS*/
+
+.gradient{
+ margin: 20px;
+}
+.gradient-item{
+    margin: 10px;
+    max-width: 200px;
+    min-height: 200px;
+    color: white;
+    font-size: 2rem;
+}
+.normal-gra{
+    background-image: linear-gradient(red, black);
+}
+.to-right{
+    background-image: linear-gradient(to right, red, black);
+}
+.degrees{
+    background-image: linear-gradient(120deg, red, black);
+}
+.normal-rad{
+    background-image: radial-gradient(red , black);
+}
