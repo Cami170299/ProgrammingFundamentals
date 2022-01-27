@@ -439,3 +439,27 @@ body {
 .normal-rad{
     background-image: radial-gradient(red , black);
 }
+
+/*TRANSFORMATIONS*/
+
+.transformations div {
+    max-width: 200px;
+    min-height: 200px;
+    background-color: red;
+    padding: 10px;
+    margin: 5px;
+    transition-duration: 0.4s;
+}
+.rotatex:hover{
+    transform: rotateX(180deg);
+    transition-duration: 0.4s;
+}
+.rotatey:hover{
+    transform: rotateY(180deg);
+    transition-duration: 0.4s;
+}
+.rotatez:hover{
+    transform: translate3d(12px,12px,10px);
+    transform: perspective(20);
+    transition-duration: 0.4s;
+}

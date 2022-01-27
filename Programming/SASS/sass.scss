@@ -1,0 +1,80 @@
+/*
+    TERMIANL CODE
+ first: sudo npm i -g sass (this will give you access to sass commands)
+second: sass --watch file.sscs:file.css (this will track changes over the course 
+of the sscs file )
+
+*/
+/*VARIABLES*/
+$claire-color: rgb(233, 233, 233); 
+$secondary-color: rgb(33, 108, 228);
+$main-font: Arial;
+$third-color:orange;
+$main-font-size: 22px;
+
+/*NESTTING*/
+
+.showcase{
+    background-color: $secondary-color;
+    color: $claire-color;
+    height: 600px;
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        ul{
+            display: flex;
+            list-style-type: none;
+            li{
+                padding: 15px;
+            }
+        }
+        a:hover{
+            color: $third-color;
+        }
+    }
+    a{
+        color: $claire-color;
+    }
+    .showcase-content{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            width: 60%;
+        }
+    }
+    }
+/*MODEULES*/
+/*FUNCTIONS AND MIXINGS*/
+/*INHERITANCE*/
+/*OPERATORS*/
+/*CONDITIONALS*/
+
+
+/*css code*/
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background-color: $claire-color;
+    font-family: $main-font;
+    font-size: $main-font-size;
+}
+.container{
+    max-width: 1100px;
+    padding: 0 30px;
+    margin: 0 auto;
+    overflow: auto;
+}
+img{
+    width: 100%;
+}
+/*css code*/
+
