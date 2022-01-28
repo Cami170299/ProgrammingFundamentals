@@ -442,6 +442,10 @@ body {
 
 /*TRANSFORMATIONS*/
 
+.transformations {
+    display: flex;
+}
+
 .transformations div {
     max-width: 200px;
     min-height: 200px;
@@ -454,12 +458,13 @@ body {
     transform: rotateX(180deg);
     transition-duration: 0.4s;
 }
-.rotatey:hover{
-    transform: rotateY(180deg);
-    transition-duration: 0.4s;
-}
 .rotatez:hover{
     transform: translate3d(12px,12px,10px);
     transform: perspective(20);
+    transition-duration: 0.4s;
+    box-shadow: 0px 0px 15px 0px;
+}
+.rotatey:hover{
+    transform: rotateY(180deg);
     transition-duration: 0.4s;
 }
