@@ -178,7 +178,7 @@ p.uppercase {
  /* Z INDEX */
 
 .zindez-container{
-    margin: auto;  /*margin auto ceneter to the middel*/
+    margin: auto;  /*margin auto center to the middel*/
     width: 50%;
     background-color: coral;
     min-height: 200px;
@@ -189,6 +189,7 @@ p.uppercase {
  max-width: 200px;
  border: solid 3px black;
  position: relative;
+ border-radius:100% ;
  }
  .z-one{
     background-color: darkolivegreen;
