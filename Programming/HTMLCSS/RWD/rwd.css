@@ -109,7 +109,7 @@ p.uppercase {
     grid-template-columns: repeat(2, 250px);
     /*grid-template-rows: repeat(5 ,1fr); used for setting the number of rows.*/
     grid-auto-rows: minmax(150px ,150px); /*you will able to set a new min and max height for each row yoou put 
-                you can put auto  ^ here to align it.  */
+    you can put auto  ^ here to align it.  */
     /*grid-row-gap: 20px;
     grid-column-gap: 10px;  setting the gap indivicualy. */
     grid-gap: 20px;
