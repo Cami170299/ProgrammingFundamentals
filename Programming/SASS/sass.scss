@@ -5,76 +5,90 @@ second: sass --watch file.sscs:file.css (this will track changes over the course
 of the sscs file )
 
 */
+
+
+/*MODULE*/
+@import "ToImport.scss";
+
 /*VARIABLES*/
-$claire-color: rgb(233, 233, 233); 
-$secondary-color: rgb(33, 108, 228);
-$main-font: Arial;
-$third-color:orange;
+$color-1: rgb(233, 233, 233); 
+$color-2: rgb(33, 108, 228);
+$color-3:orange;
+$main-font: helvetica;
 $main-font-size: 22px;
+
+body{
+    background-color: $color-4;
+    color: $color-1;
+}
+
+.global-variable{
+    $color-2: red !global; //whith this property now thw $color-2 is defined.
+}
+h1{
+    color: $color-2;
+    display: none;
+}
+
 
 /*NESTTING*/
 
-.showcase{
-    background-color: $secondary-color;
-    color: $claire-color;
-    height: 600px;
-    nav{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        ul{
-            display: flex;
-            list-style-type: none;
-            li{
-                padding: 15px;
-            }
-        }
-        a:hover{
-            color: $third-color;
-        }
+.hover-property:hover {
+    h1{
+        display: block;
+        font-family: $main-font;
+        font-size: $main-font-size;
+        transition-duration: 0.7s;
     }
-    a{
-        color: $claire-color;
-    }
-    .showcase-content{
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        img{
-            width: 60%;
-        }
-    }
-    }
-/*MODEULES*/
-/*FUNCTIONS AND MIXINGS*/
+}
+
+/*MIXINGS*/
+
+@mixin buttons($backGround:rgb(0, 255, 0), $textColor:blue) {//this case is a mixing with default values.
+    max-width: 100px;
+    min-height: 50px;    
+    background-color: $backGround;
+    color: $textColor;
+    font-family: $main-font;            // this is how you create a mixing.
+    border-radius: 7px;                 // note: mixing are like objects of properties.
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    border: none;
+}
+                            
+@mixin buttonsHover($backGround, $textColor) { //mixing act like a function, which you can change properties.
+    background-color: $backGround;
+    color: $textColor;
+    transition-duration: 1s;
+    cursor: pointer;
+}
+
+
 /*INHERITANCE*/
-/*OPERATORS*/
-/*CONDITIONALS*/
 
-
-/*css code*/
-* {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-}
-a{
-    text-decoration: none;
-}
-body{
-    background-color: $claire-color;
-    font-family: $main-font;
+.inheritance1{
+    text-align: center;
     font-size: $main-font-size;
+    background-color: red;
+    color: white;
+    max-width: 40%;
+    margin: auto;
+    padding: 10px;
+    margin-top: 20px
 }
-.container{
-    max-width: 1100px;
-    padding: 0 30px;
-    margin: 0 auto;
-    overflow: auto;
+.inheritance2{
+    @extend .inheritance1;
+    background-color: $color-3
 }
-img{
-    width: 100%;
-}
+/*css code*/
+    .button{
+        @include buttons;
+    }
+    .button:hover{
+        @include buttonsHover(rgb(56, 56, 56),white);
+    }
 /*css code*/
 
