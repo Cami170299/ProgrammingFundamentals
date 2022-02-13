@@ -83,6 +83,10 @@ h1{
     @extend .inheritance1;
     background-color: $color-3
 }
+
+
+
+
 /*css code*/
     .button{
         @include buttons;
