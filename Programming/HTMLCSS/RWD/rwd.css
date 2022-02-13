@@ -469,3 +469,18 @@ body {
     transform: rotateY(180deg);
     transition-duration: 0.4s;
 }
+
+
+/*  HOW TO IDENTIFY THE LANDSCAPE MODE IN A PHONE OR ANY DEVICE.*/
+
+@media screen and (orientation:portrait) {
+    body{
+        background-color: red;
+    }
+}
+    
+@media screen and (orientation:landscape) { 
+    body{
+        background-color: black;
+    }
+}
