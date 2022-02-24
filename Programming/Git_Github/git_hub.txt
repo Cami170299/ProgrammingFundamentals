@@ -4,6 +4,7 @@ Git is a control command system line tool used for programming projects.
 You have to install Git on your computer. 
 
 Configuring Git
+========================================
 
 You can configure git in 3 level
 
@@ -12,6 +13,7 @@ You can configure git in 3 level
 3. Local, Just the Curren rep. 
 
 Setting GIT
+========================================
 
 -git config - - global user.name ¨Camilo Sierra¨
 -git config - - global user.email yes@email.com
@@ -47,7 +49,8 @@ And at the end you will have to use
 
 .gitignore you create this file to inside put the files you want GitHub to ignore.
 
-Branching.
+Branching
+========================================
 
 how to branch.
 
@@ -63,7 +66,8 @@ Git checkout name_branch: You can switch branches.
 Git merge name_branch: merge the branches on the head that you are on. 
 Git branch -d name_branch : to delete the branch created
 
-Creating a SSH key pair.(Secure Shell pair key).
+Creating a SSH key pair.(Secure Shell pair key)
+==============================================================
 
 In order to create an SSH pair first write this in command
 

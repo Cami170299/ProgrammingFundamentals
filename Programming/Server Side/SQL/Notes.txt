@@ -1,0 +1,24 @@
+							how to learn SQL
+Get or install a DataBase.
+
+	Option 1. One of the easiest ways to get a database is to register for a shared hosting account. If you go to hostgator.com and enter the code 
+	“onemonthcode,″ you’ll gain access to a MYSQL database for only $0.01 (for the first month). Once you’re in the 
+	control panel (or cPanel) click the option to create a new database. Then, click on “PHPMyAdmin” for access to your 
+	MYSQL database.  to learn more. 
+
+	Option 2.A alter. instead of hostgator.com is "Mamp", you run everything localy.
+
+Get Data to play with (DataSet)
+	
+	After setting up My SQL, you can run a DataSet importing the information for free 
+	(Related documentation: https://learn.onemonth.com/the-complete-guide-to-learn-sql-in-just-15-minutes-for-free/)
+		-- Run some commands 		
+
+Learn SQL 
+
+	(Book: Sams Teach Yourself SQL in 10 min bt Ben Forta).
+	w3schools.com (Web page to learn).
+
+Notes: 
+	Try to brake the code of other people.
+	

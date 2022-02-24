@@ -1,0 +1,94 @@
+SASS
+
+Is a CSS source code for transpiling into more efficient web applications.
+
+How to install 
+==============================================================
+
+	Step 1. Install Ruby.
+	Step 2. Open the command line with Ruby and enter [gem install sass]
+	Step 3. In normal terminal write [sudo npm i -g sass]  Note: this will activate all the sass commands
+
+Using sass
+==============================================================
+
+	Step 4. To track the files and make them transpile write [sass —watch MyName.sscs:Myname.css] this will activate the transpliling on the .css file. 
+
+
+
+Import Values
+==============================================================
+
+@import "Name.scss";
+
+Variables 
+
+$Mycolor: red;
+
+body {
+	background-colour: Mycolor;
+}
+
+Nesting
+==============================================================
+
+.hover-property:hover {
+    h1{
+        display: block;
+        font-family: $main-font;
+        font-size: $main-font-size;
+        transition-duration: 0.7s;
+    }
+}
+
+@mixin
+==============================================================
+
+@mixin buttons($backGround:rgb(0, 255, 0), $textColor:blue) {//this case is a mixing with default values.
+    max-width: 100px;
+    min-height: 50px;    
+    background-color: $backGround;
+    color: $textColor;
+    font-family: $main-font;            // this is how you create a mixing.
+    border-radius: 7px;                 // note: mixing are like objects of properties.
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    border: none;
+}
+                            
+@mixin buttonsHover($backGround, $textColor) { //mixing act like a function, which you can change properties.
+    background-color: $backGround;
+    color: $textColor;
+    transition-duration: 1s;
+    cursor: pointer;
+}
+
+This is how you call a mixing to take place
+
+    .button{
+        @include buttons; //With closed values
+    }
+    .button:hover{
+        @include buttonsHover(rgb(56, 56, 56),white); //this is with variables mixing
+    }
+
+@extend || inheritance
+==============================================================
+
+.inheritance1{
+    text-align: center;
+    font-size: $main-font-size;
+    background-color: red;
+    color: white;
+    max-width: 40%;
+    margin: auto;
+    padding: 10px;
+    margin-top: 20px
+}
+.inheritance2{
+    @extend .inheritance1;
+    background-color: $color-3
+}

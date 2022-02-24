@@ -89,7 +89,7 @@ h1{
 
 /*css code*/
     .button{
-        @include buttons;
+        @include buttons; 
     }
     .button:hover{
         @include buttonsHover(rgb(56, 56, 56),white);
