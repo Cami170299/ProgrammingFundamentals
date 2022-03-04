@@ -1,0 +1,8 @@
+                                Boostrap
+
+Boostrap is a CSS library we can use style that have been written already. 
+
+Note:
+
+    - Check the Boostrap documentation in order to find Components, etc... (link: https://getbootstrap.com/docs/5.1/getting-started/introduction/)
+    
