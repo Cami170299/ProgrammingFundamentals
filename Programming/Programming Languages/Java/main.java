@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner; // input value terminal.
 import javax.swing.JOptionPane; // dialog box appear.
-
+import javax.naming.spi.DirStateFactory.Result;
 import javax.sql.rowset.spi.SyncResolver;
 import javax.swing.event.SwingPropertyChangeSupport;
 
@@ -308,20 +308,88 @@ public class main {
         helloByName("Cami");
         helloByName("Cami Jr.");
 
+        //calling a return method with
+        System.out.println(makeASum(12, 23));
+
+        //Calling OverLoaded methods 
+        int methodInt = sameNameMethod( 12, 3);
+        float methodFloat = sameNameMethod( 23.456f, 12.234f);
+        double methodDouble = sameNameMethod( 3.124232d, 3.1244d);
+        System.out.println(methodInt);
+        System.out.println(methodDouble);
+        System.out.println(methodFloat);
+
+        //Calling a recursion method 
+        System.out.println(sum(100));
+        
+
     }
 
                                         /*NEW METHODS*/
                         //============================================
     
     //creating a basic method
-    public static void myNewMethod() {
+    static void myNewMethod() {
         System.out.println("This is a new method called.");
     }
 
     //a method with parameters
-    public static void helloByName(String userName) {
+    static void helloByName(String userName) {
         System.out.println("Hello "+userName);
     }
+
+    //Return values 
+    static int makeASum(int a, int b){ //the void declaration block the return of a method.
+        int resultSum = a+b;
+        return resultSum;
+    }
+
+    //Java method OverLoading
+        //with declaration we can have multiple methods with the same name.
+    static int sameNameMethod(int x, int y){
+        return x+y; 
+    }
+    static float sameNameMethod(float x, float y){
+        return x+y;
+    }
+    static double sameNameMethod(double x, double y){
+        return x+y;
+    }
+
+    //Scope
+    static void scopingMEthods(){
+        
+        //Cannot use X
+
+        { //this is a code block
+            int x = 100;
+            System.out.println(x);
+        }
+
+        //Cannot Use X
+    } 
+
+    //Recurtion
+        //in this example we find the factorial of n == n!
+    static int sum(int k ){
+        if (k > 0) {
+            return k + sum(k - 1);
+        }else{
+            return 0;
+        }
+    }
+
+    //Helting 
+        //it has the same concept of recurtion but with limits. 
+    static int halting(int start, int end ){
+        if (end > start){
+            return end + halting(start, end -1);
+        }
+        else {
+            return start;
+        }
+    }
+    
 }
 
 
