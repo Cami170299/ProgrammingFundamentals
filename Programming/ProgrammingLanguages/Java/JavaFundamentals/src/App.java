@@ -1,15 +1,9 @@
-import java.util.ArrayList;
-import java.util.Scanner; // input value terminal.
-import javax.swing.JOptionPane; // dialog box appear.
-import javax.naming.spi.DirStateFactory.Result;
-import javax.sql.rowset.spi.SyncResolver;
-import javax.swing.event.SwingPropertyChangeSupport;
+import java.util.ArrayList; //Array funtions <integer>
 
-//everytime the .java file always must match with the class <-
-public class main { 
-    public static void main(String[] args) {
-        
-    //VARIABLE´S TYPE
+
+public class App {
+    public static void main(String[] args) throws Exception {
+  //VARIABLE´S TYPE
 
         //strings 
         String myString = "This is a string on a variable.";
@@ -111,11 +105,15 @@ public class main {
         swapNum2 = temporal;
         System.out.println("Num1: "+swapNum1);
         System.out.println("Num2: "+swapNum2);
-        
+
+
+          /* 
+        import java.util.Scanner; // input value terminal.
+        import javax.swing.JOptionPane; // dialog box appear.
         //this is how oyu call an imput.
         Scanner scan = new Scanner(System.in);
 
-       /*
+    
         //questions scan System.in
         System.out.println("What is oyur name ?");
         String name = scan.nextLine();
@@ -138,11 +136,15 @@ public class main {
     //STRINGS 
 
         //String methods
-        String txt = "This is a Text";
+        String txt = "   This is a Text   ";
         System.out.println("The lenght of the text is: "+ txt.length());
         System.out.println("LowerCase: " +txt.toLowerCase());
         System.out.println("UperCase: " +txt.toUpperCase());
         System.out.println("The index of the word 'a' is: "+txt.indexOf("a"));
+        System.out.println("The Letter at my index 3 is: "+txt.charAt(3));
+        System.out.println("Boolean verification of a string: "+txt.isEmpty());
+        System.out.println("We will erase the spaces before and after: " +txt.trim());
+        System.out.println("we will replace 'text' for 'line': "+txt.replace("Text", "Line"));
 
         //String concatenations
         String firstName = "Camilo";
@@ -280,10 +282,9 @@ public class main {
         }
 
         //Changing elements in a array
-        String[] disneyCharacters = {"Timon", "Pumba", "Mogly", "Elsa"};
-        disneyCharacters[1] = "Snow White";
-        for(int dis = 0; dis != disneyCharacters.length;dis++){
-            System.out.println(disneyCharacters[dis]);
+        myStrArray[1] = "Hasta Luego";
+        for(int dis = 0; dis != myStrArray.length;dis++){
+            System.out.println(myStrArray[dis]);
         }
 
         //Multidimentional arrays 
@@ -321,8 +322,6 @@ public class main {
 
         //Calling a recursion method 
         System.out.println(sum(100));
-        
-
     }
 
                                         /*NEW METHODS*/
@@ -391,6 +390,7 @@ public class main {
     }
     
 }
+
 
 
 
