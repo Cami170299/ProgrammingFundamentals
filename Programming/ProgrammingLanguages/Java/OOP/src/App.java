@@ -29,7 +29,7 @@ public class App {  //<--- this is my class
         //Calling a Method
         printHello();
 
-        //P rivate attribute Encapsulation
+        //Private attribute Encapsulation
         encapsulation enc = new encapsulation();
         enc.setFirstName("Camilo"); //<-- setting a private attribute in encapsulation.java
         System.out.println("The new name is: "+ enc.getFirstName()); //<-- calling the private attribute.
