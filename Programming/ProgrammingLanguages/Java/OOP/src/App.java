@@ -1,6 +1,7 @@
                             //(OOP)Object Oriented Programming.
                         //==========================================
 
+//The basics.
 
 public class App {  //<--- this is my class
     
@@ -24,8 +25,21 @@ public class App {  //<--- this is my class
         System.out.println(ChangingX.x);
         //Printing mutilple objects 
         System.out.println("Full Name: " + name.name +" "+lastName.lastName +" "+ ChangingX.x );
+        
+        //Calling a Method
+        printHello();
 
+        //P rivate attribute Encapsulation
+        encapsulation enc = new encapsulation();
+        enc.setFirstName("Camilo"); //<-- setting a private attribute in encapsulation.java
+        System.out.println("The new name is: "+ enc.getFirstName()); //<-- calling the private attribute.
     }
+
+    public static void printHello(){ //<-- This is another method
+        System.out.println("Hello World!");
+    }
+
+    
 
 
 }
