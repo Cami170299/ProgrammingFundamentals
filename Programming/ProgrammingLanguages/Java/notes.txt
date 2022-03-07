@@ -1,0 +1,24 @@
+JAVA
+
+How to set Java environment.
+
+Source Code(.java) ======>Object Code (Binary)
+			   Mac =/ Windows 
+
+For compiling the source code to machine code is different from MacOS and Windows, so if we want a
+ program to work in both we have to transcript but with Java we can with some middle step called 
+ Byte Code (.class as file extension).
+
+Source Code(.java) ===> Byte Code(.class) ===>Object Code (Binary)
+					  Mac == Windows 
+
+For implementing the Byte Code middle step we need a JVM, with is s component of a JDK
+
+What is JDK?
+
+A JDK (Java Development Kit) is a developer too with help to get a JRE (Java Runtime Enviroment),
+ which is a bunch of libraries and Java toolkits, and also in which we will find our JVM 
+ (Java Virtual Machine ).
+
+After installing JDK we can start making our first line of code.
+   

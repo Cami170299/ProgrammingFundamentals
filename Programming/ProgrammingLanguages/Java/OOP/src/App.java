@@ -22,24 +22,23 @@ public class App {  //<--- this is my class
         ChangingX.x = 30; 
         System.out.println(number);
         System.out.println(Valuey.y);
-        System.out.println(ChangingX.x);
-        //Printing mutilple objects 
-        System.out.println("Full Name: " + name.name +" "+lastName.lastName +" "+ ChangingX.x );
+        System.out.println(ChangingX.x); 
+        System.out.println("Full Name: " + name.name +" "+lastName.lastName +" "+ ChangingX.x ); //Printing mutilple objects 
         
         //Calling a Method
         printHello();
 
         //Private attribute Encapsulation
         encapsulation enc = new encapsulation();
-        enc.setFirstName("Camilo"); //<-- setting a private attribute in encapsulation.java
-        System.out.println("The new name is: "+ enc.getFirstName()); //<-- calling the private attribute.
+        encapsulation mySecEnc = new encapsulation();
+        enc.setFirstName("Anna");
+        mySecEnc.setLastName("Sierra"); //<-- setting a private attribute in encapsulation.java
+        System.out.println("My name is: "+enc.getFirstName()+" "+mySecEnc.getLastName()); //<-- calling the private attribute.
     }
 
     public static void printHello(){ //<-- This is another method
         System.out.println("Hello World!");
     }
-
-    
 
 
 }
