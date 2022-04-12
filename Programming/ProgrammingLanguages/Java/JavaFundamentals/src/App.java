@@ -322,11 +322,22 @@ public class App {
 
         //Calling a recursion method 
         System.out.println(sum(100));
-    }
+    
+        System.out.println(sum(-10));
 
+    }
+      
+
+    public static int sum(int[] arr) {
+		int total = 0;
+		for(int sum : arr){
+			total =+ sum;
+		}
+		return total;
+	}
                                         /*NEW METHODS*/
                         //============================================
-    
+
     //creating a basic method
     static void myNewMethod() {
         System.out.println("This is a new method called.");
@@ -343,6 +354,7 @@ public class App {
         return resultSum;
     }
 
+    
     //Java method OverLoading
         //with declaration we can have multiple methods with the same name.
     static int sameNameMethod(int x, int y){

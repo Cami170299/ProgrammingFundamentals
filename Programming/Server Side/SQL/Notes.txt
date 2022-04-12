@@ -1,0 +1,348 @@
+										 SQL
+
+
+Get or install a DataBase.
+
+	Option 1. One of the easiest ways to get a database is to register for a shared hosting account. If you go to hostgator.com and enter the code 
+	“onemonthcode,″ you’ll gain access to a MYSQL database for only $0.01 (for the first month). Once you’re in the 
+	control panel (or cPanel) click the option to create a new database. Then, click on “PHPMyAdmin” for access to your  	MYSQL database.  to learn more. 
+
+	Option 2.A alter. instead of hostgator.com is "Mamp", you run everything localy.
+
+Get Data to play with (DataSet)
+	
+	After setting up My SQL, you can run a DataSet importing the information for free 
+	(Related documentation: https://learn.onemonth.com/the-complete-guide-to-learn-sql-in-just-15-minutes-for-free/)
+		-- Run some commands 		
+
+Notes: 
+
+	(Book: Sams Teach Yourself SQL in 10 min by Ben Forta).
+	w3schools.com (Web page to learn).
+	Try to brake the code of other people.
+
+
+
+											WHAT IS SQL
+
+SQL is a Structured Query Programming Language, (Basically is the language we use to manipulate data in a database.) 
+SQL is a hybrid language so is basically 4 languages in 1
+
+1. Data Query Language (DQL)
+	Is used to Query the data base for information.
+	Get information that is already stored.
+
+2. Data Definition Language (DDL)
+	Used fo defined database schemas. (Structure of the DB )
+
+3. Data Control Language (DCL)
+	Used for controlling accessing data in the database.
+	User & permission managements.(Control the accessibility of the users for each DB or Data table.)
+
+4. Data Manipulation Language (DML)
+	Used C.R.U.D.       (CRUD stands for: Create, Read, Update & Delete.)
+
+										WHAT IS A DATABASE
+
+A data base is any type of related store information.
+
+Structure
+
+Data Base (DB) —> Tables —> Data, Id, Information, etc...
+
+Types of DBs:
+
+	1) Non-relational DB (noSQL / not just SQL)
+
+	Is any type of DB that is not a relational DB.
+
+		- Key-Value Stores
+		- Documents (JSON, XML, etc)
+		- Graphs
+
+	2) Relational DB (SQL)
+
+	Organize data into one or more tables:
+	
+		- Each table columns and rows 
+		- A unique key identifies each row. 
+
+In order to manipulate a Relational DB we need a (RDBMS)
+
+
+										RELATIONAL DATA BASE MANAGEMENT SYSTEM (RDBMS)
+
+
+A DBMS is a  (Relational Data Base Management system) as the same as MySQL there is multiple RDBMS such as:
+
+	- SQLite
+	- PostgreSQL
+	- Oracle
+
+The main functionalities of a RDBMS are:       (Note: Even though RDBMS use SQL the implementations vary from one to another.)
+
+	- Make easier the management of large amount of data. CRUD
+	- Handle Security
+	- Create Backups 
+	- Import and Export Data.
+	- Concurrency.
+	- Interact with software Languages 
+		- Java 
+		- Pyhon.
+		- C# etc.. 
+
+With this functionalities we can perform CRUD operations, as well as Queries.
+
+												QUERY
+
+A query is a set of instructions given to the RDBMS (Written in SQL) that tells the RDBMS what information we are asking for 
+(Basically something like a program.) The queries are defines to work with IDs (PRIMARY KEYS) which gather specific information 
+for our requests.
+
+Example:
+
+SELECT employee.name, employee.age
+FROM Employee
+WHERE employee.salary > 30000;
+
+What is a Primary Key
+
+Is a value that identifies a specific row in a table.
+
+Types of primary keys:
+
+	- Surrogated Keys (Which is a random number. Exp. 12N0983)
+	- Natural Keys(This are unique identifiers in the real world as well Exp. e-mail \\ SIN number)
+	- Foreign Keys (Is a key that takes us to another tables primary key)
+	- Composed key (2 Identifiers, this could be Surrogated, Natural or even Foreign keys. )
+
+											
+
+									HOW TO INSTALL 
+
+First we need a DB server, so we will install our RDBMS in this case (MySQL), 
+
+Once installed you will have to activate the command line writing : 
+
+echo 'export PATH=/usr/local/mysql/bin:$PATH'>> ~/.bash_profile
+. ~/.bash_profile
+
+This will activate ‘mysql’ commands.
+
+The set your user with => 
+				
+				ALTER USER 'root'@'localhost' IDENTIFIED BY 'password';    							OR 
+				GRANT ALL PRIVILEGES ON *.* TO 'db_user'@'localhost' IDENTIFIED BY 'P@s$w0rd123!';
+
+										CREATING OUR FISRT DATABASE
+Access your DB
+
+mysql -u root -p         (<——— this is the command to access the database)   
+
+Then to create a data base you put 
+
+		 CREATE DATABASE DataBaseName;
+
+To check if you created a data base use:
+	
+		 SHOW DATABASES
+
+Then to modify your DB you need to write;
+
+		USE database_name;
+
+											CREATING A TABLE
+
+Types of data we can store in tables
+
+INT 						— Whole numbers 
+DECIMAL(M,N)			— Store the length of national numbers in M and irrational in N exp. (2,5) = 12.45654
+VARCHAR(1)				— The length of text 
+BLOB					— Binary numbers (omg, videos, etc)
+DATE					— format ‘yyyy-mm-dd’
+TIMESTAMP				— format ‘yyyy-mm-dd hh:mm:ss’
+
+The comparison formats are 
+
+		= : Equals 
+		<> : Not Equal To
+		> : Greater than 
+		< : Less than 
+		<= or >=  		
+
+The command for creating a table:
+
+Most important SQL Commands 
+
+/*C.R.U.D COMMANDS*/
+
+UPDATE - Updates data in a database
+DROP - Deletes data from a database
+INSERT INTO - Inserts new data into a database
+CREATE DATABASE - Creates a database 
+ALTER DATABASE - Modifies a database 
+CREATE TABLE -  Creates a new table
+ALTER TABLE - Modifies a table 
+DROP TABLE - Deletes a table 
+CREATE INDEX - Creates an index (Search Key)
+DROP INDEX - deletes an index 
+
+/*QUERIES*/
+
+SELECT - Extracts data from a database 
+FORM - specify the table
+WHERE - Gives Parameters
+DISTINCT - unique values
+COUNT - the length of the data
+LIKE - Starts ends with a specific combination.
+IN() - allows you to look for multiple parameters
+
+
+
+/*Different data types
+INT  -- Exp. 1234567 
+DECIMAL(M,N) -- Exp. (2,4) = 12.4566
+VARCHAR(1) -- String (4) = hola.
+BLOB -- Binary large data = videos photos
+DATE -- 'yyyy-mm-dd'
+TIMESTAMP -- 'yyyy-mm-dd HH:MM:SS'
+*/
+
+
+
+
+                              				  /*CRUD COMMANDS*/
+
+
+
+    --TABLES
+
+/*Creating a table*/
+CREATE TABLE example (
+    id INT AUTO_INCREMENT, -- It will increase the automatically the value
+    first_name VARCHAR(30) NOT NULL,
+    last_name VARCHAR(30) NOT NULL,
+    phone_number INT NOT NULL UNIQUE, -- NOT NULL = no empty , UNIQUE = does not repeat itself.
+    birthday DATE,
+    description VARCHAR(20) DEFAULT 'No description', -- The default will automaticalli assign the value in the table. 
+    PRIMARY KEY (id) -- Creating a primary key. 
+);
+
+/*Delete a Table*/
+DROP TABLE students;
+
+
+    -- COLUMNS
+
+/*Updating a primary key*/
+ALTER TABLE example ADD PRIMARY KEY(first_name);
+
+/*Creating a column*/
+ALTER TABLE example ADD country VARCHAR(30);
+
+/*Updating the name of a column*/
+ALTER TABLE example RENAME COLUMN id TO example_id;
+
+/*Updating a column properties*/
+ALTER TABLE example MODIFY COLUMN phone_number BIGINT;
+
+/*Deleting a column */
+ALTER TABLE example DROP COLUMN birthday;
+
+
+    -- ROWS 
+
+
+/*creating a new row*/
+INSERT INTO example 
+                (id,first_name,last_name,phone_number,description,country)
+                VALUES (100,'Jack', 'Daniels', 51466576978,'Like Whisky','Canada');
+INSERT INTO example
+                (first_name,last_name,phone_number,country) 
+                VALUES ('Michael', 'Scott', 5149874678,'Colombia'),
+                ('Andy','Bernard',4388974532, 'United States'),
+                ('Camilo', 'Sierra', 5127786756, 'Colombia'),
+                ('Marlon', 'Texeira', 8379380044, 'Brasil'),
+                ('Anna', 'Rüpp-Desrosiers', 4368764936, 'Canada'),
+                ('Saulo', 'Barra', 9871237643, 'Canada');
+
+/*Updating a row*/
+UPDATE exmaples SET hpone_number = 1234560932 WHERE id = 100; 
+
+/*Deleting values*/
+DELETE FROM exmaples WHERE id = 2 AND fisrt_name = 'Michael';
+
+
+
+
+
+							  /*QUERIES*/
+
+
+
+
+/*Show all tables of the database*/
+SHOW TABLES;
+
+/*Display a table*/
+DESCRIBE example;
+
+/*selecting data*/
+SELECT * FROM example;
+
+/*Specified Queries*/
+SELECT first_name, last_name FROM example;
+
+/*Identify the type of values no matter if the repeat itself */
+SELECT DISTINCT country FROM example;
+
+/*This will tell the count of a value in this case different values. */
+SELECT COUNT(DISTINCT country) FROM example;
+
+/*Specification*/
+SELECT * FROM example WHERE id = 100;
+
+/*Selecting a-likes*/
+SELECT first_name FROM example WHERE country LIKE 'C%'; -- can also 'Can%' or '&ada'
+
+/*In selector*/
+SELECT first_name, last_name FROM example WHERE country IN ('Colombia', 'Canada');
+
+/* ordering and Limiting results*/
+SELECT first_name, phone_number FROM example ORDER BY last_name ASC LIMIT 2; -- can also be ASC and DESC order
+
+/*Operators*/
+SELECT first_name FROM example
+WHERE NOT country = 'E.E.U.U' AND NOT country LIKE 'Can%' /*You also have 'OR'*/
+
+
+
+
+
+
+
+
+
+											/*CREATING A COMPLEX DB*/ = (Company_DataBAse)
+
+
+— employee table
+
+CREATE TABLE employee(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR (20),
+    last_name VARCHAR(20),
+    birthday DATE,
+    sex VARCHAR(1),
+    salary BIGINT,
+    supervisor INT,
+    branch INT);
+
+— branch table 
+
+CREATE TABLE branch (
+    branch_id INT PRIMARY KEY,
+    branch_name VARCHAR(20),
+    branch_manager INT,
+    manager_startdate DATE,
+    FOREIGN KEY(branch_manager) REFERENCES employee(id) ON DELETE SET NULL);
