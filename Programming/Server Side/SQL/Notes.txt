@@ -346,3 +346,5 @@ CREATE TABLE branch (
     branch_manager INT,
     manager_startdate DATE,
     FOREIGN KEY(branch_manager) REFERENCES employee(id) ON DELETE SET NULL);
+
+
