@@ -249,6 +249,8 @@ ALTER TABLE example MODIFY COLUMN phone_number BIGINT;
 /*Deleting a column */
 ALTER TABLE example DROP COLUMN birthday;
 
+/*Adding a primary foring key to a column*/
+ALTER TABLE example ADD FOREIGN KEY (column_nameaddkey) REFERENCES table(column_referencekey) ON DELETE SET NULL;
 
     -- ROWS 
 
@@ -336,7 +338,7 @@ CREATE TABLE employee(
     sex VARCHAR(1),
     salary BIGINT,
     supervisor INT,
-    branch INT);
+    supervised_branch INT);
 
 — branch table 
 
@@ -346,3 +348,31 @@ CREATE TABLE branch (
     branch_manager INT,
     manager_startdate DATE,
     FOREIGN KEY(branch_manager) REFERENCES employee(id) ON DELETE SET NULL);
+
+ALTER TABLE employee ADD FOREIGN KEY (supervisor) REFERENCES branch(branch_id) ON DELETE SET NULL;
+ALTER TABLE employee ADD FOREIGN KEY (supervised_branch) REFERENCES employee(id) ON DELETE SET NULL;
+
+
+CREATE TABLE client (
+    client_id INT PRIMARY KEY,
+    client_name VARCHAR(20),
+    branch_id INT,
+    FOREIGN KEY (branch_id) REFERENCES branch(branch_id) ON DELETE SET NULL
+);
+
+CREATE TABLE works_with (
+    employee_id INT,
+    client_id INT,
+    total_sales INT,
+    PRIMARY KEY (employee_id, client_id), /*composed primary key*/
+    FOREIGN KEY (employee_id) REFERENCES employee(id) ON DELETE CASCADE,
+    FOREIGN KEY (client_id) REFERENCES client(client_id) ON DELETE CASCADE
+);
+
+CREATE TABLE branch_supplier (
+    branch_id INT,
+    supplier_name VARCHAR(20), 
+    supplier_type VARCHAR(20),
+    PRIMARY KEY (branch_id,supplier_name),
+    FOREIGN KEY (branch_id) REFERENCES branch(branch_id) ON DELETE CASCADE
+);
