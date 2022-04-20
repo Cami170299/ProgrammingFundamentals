@@ -323,12 +323,12 @@ WHERE NOT country = 'E.E.U.U' AND NOT country LIKE 'Can%' /*You also have 'OR'*/
 
 
 
-											/*CREATING A COMPLEX DB*/ = (Company_DataBAse)
+									/*CREATING A COMPLEX DB*/ = (Company_DataBase)
 
 
 — employee table
 
-CREATE TABLE employee(
+CREATE TABLE employees(
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR (20),
     last_name VARCHAR(20),
@@ -347,4 +347,101 @@ CREATE TABLE branch (
     manager_startdate DATE,
     FOREIGN KEY(branch_manager) REFERENCES employee(id) ON DELETE SET NULL);
 
+
+INSERT INTO branch VALUES(4,'Buffalo', NULL, NULL);
+
+										/*QUERIES*/ = (Company_Database)
+
+-- find all employees
+	SELECT * FROM employees;
+
+-- find all clients
+	SELECT * FROM client;
+
+-- find all the employees ordered by salary
+	SELECT first_name,salary FROM employees ORDER BY salary DESC;
+
+-- Select all employees ordered by sex then name
+	SELECT first_name, sex FROM employees ORDER BY sex, first_name;
+
+-- Select the first 5 employees of thge table.
+	SELECT * FROM employees LIMIT 5;
+
+-- select firts and last name from employees
+	SELECT employees.first_name, employees.last_name FROM employees;
+
+-- find the forename and surname fo all employees 
+	SELECT first_name AS forename , employees.last_name AS surname FROM employees;
+
+-- find all the different sexes
+	SELECT COUNT(DISTINCT sex) FROM employees;
+
+-- Select all male employees
+	SELECT * FROM employees WHERE sex = 'M' AND salary >= 75000 ORDER BY salary DESC;
+
+-- Select all employees from branch 2
+	SELECT * FROM employees WHERE branch_id = 2;
+
+-- Find all employee's id's and names who were born after 1969
+	SELECT employees.first_name, birth_day AS Year FROM employees WHERE birth_day >= '1969-01-01';	
+
+-- finding all females employees
+	SELECT * FROM employees WHERE branch_id = 2 AND sex = 'F';
+
+-- Find all employees who are female & born after 1969 or who make over 80000
+	SELECT * FROM employees WHERE sex = 'F' AND birth_day = '1970-01-01' OR salary > 80000;
+
+-- Find all employees born between 1970 and 1975
+	SELECT * FROM employees WHERE birth_day BETWEEN '1970-01-01' AND '1975-01-01';
+
+-- Find all employees named Jim, Michael, Johnny or David
+	SELECT * FROM employees WHERE first_name IN ('Jim', 'Michael', 'Johnny', 'David');
+
+									/*fUNTION QUERIES*/
+
+-- Find how many employees are
+	SELECT COUNT(*) AS Amount FROM employees;
+
+-- Find the average of all employees salary
+	SELECT AVG(salary) FROM employees WHERE salary BETWEEN 70000 AND 150000;
+
+-- Find the sum of all salaries
+	SELECT SUM(salary) FROM employees;
+
+-- Fing how many females and male are 
+	SELECT COUNT(sex),sex FROM employees GROUP BY sex; 
+
+-- Find the total sales of each sales man
+	SELECT SUM(total_sales) AS sales, employee_id FROM works_with GROUP BY employee_id ORDER BY sales DESC;
+
+-- Find the total amount of money spended by each client
+	SELECT SUM(total_sales), client_id FROM works_with GROUP BY client_id ORDER BY SUM(total_sales) DESC;
+
+										/*WILD CARDS*/
+
+-- Find a client taht is a LLC
+SELECT * FROM client WHERE client_name LIKE '%LLC%';
+
+-- Find any client's who are an LLC
+SELECT * FROM client WHERE client_name LIKE '%LLC';
+
+-- Find any branch suppliers who are in the label business
+SELECT * FROM branch_supplier WHERE supplier_name LIKE '% Label%';
+
+-- Find any employee born on the 10th day of the month
+SELECT * FROM employees WHERE birth_day LIKE '____-10-%';
+
+										/*UNIONS*/
+
+-- Find a list of employee and branch names
+SELECT employees.first_name AS Employee_Branch_Names FROM employees
+UNION
+SELECT branch.branch_name FROM branch;
+
+-- Find a list of all clients & branch suppliers' names
+SELECT client.client_name AS Non_Employee_Entities, client.branch_id AS Branch_ID FROM client
+UNION
+SELECT branch_supplier.supplier_name, branch_supplier.branch_id FROM branch_supplier;
+
+										/*JOINS*/
 
