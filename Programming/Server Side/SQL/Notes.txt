@@ -218,7 +218,7 @@ TIMESTAMP -- 'yyyy-mm-dd HH:MM:SS'
     --TABLES
 
 /*Creating a table*/
-CREATE TABLE example (
+CREATE TABLE example123 (
     id INT AUTO_INCREMENT, -- It will increase the automatically the value
     first_name VARCHAR(30) NOT NULL,
     last_name VARCHAR(30) NOT NULL,
@@ -233,6 +233,9 @@ DROP TABLE students;
 
 
     -- COLUMNS
+
+/*Change the name of a table*/
+ALTER TABLE exmaple123 RENAME TO exmaple;
 
 /*Updating a primary key*/
 ALTER TABLE example ADD PRIMARY KEY(first_name);
@@ -330,8 +333,8 @@ WHERE NOT country = 'E.E.U.U' AND NOT country LIKE 'Can%' /*You also have 'OR'*/
 
 — employee table
 
-CREATE TABLE employee(
-    id INT PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE employees(
+    employee_id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR (20),
     last_name VARCHAR(20),
     birthday DATE,
@@ -376,3 +379,4 @@ CREATE TABLE branch_supplier (
     PRIMARY KEY (branch_id,supplier_name),
     FOREIGN KEY (branch_id) REFERENCES branch(branch_id) ON DELETE CASCADE
 );
+
