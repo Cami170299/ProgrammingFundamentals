@@ -1,6 +1,14 @@
 JAVA
 
-How to set Java environment.
+What does Java is useful for ?
+
+ - Mobile applications 
+ - Descktop applications
+ - Web Applicaions 
+ - Games 
+ - Data base connecitons.
+
+How to intall and set Java environment.
 
 Source Code(.java) ======>Object Code (Binary)
 			   Mac =/ Windows 
@@ -22,3 +30,60 @@ A JDK (Java Development Kit) is a developer too with help to get a JRE (Java Run
 
 After installing JDK we can start making our first line of code.
    
+									CREATING A JAVA FILE
+
+Once you create the file you can use [javac Main.java] <= this will compile the text into Binary
+
+										JAVA SYNTAX
+
+	Class 
+Any line of code in java must be made inside of a "class" which always have to start with 
+a Capital letter exp.
+
+					public class Mian{
+
+					} 
+
+	Main method
+Any class on a java file requires a main method to funtion properly. exp. 
+
+					public class Main{
+						public static void main(Satring[] args){
+
+						}
+					}
+
+									JAVA VARIABLES
+
+Data types
+
+	Primitive data types
+		the primitive datatypes are the ones with no additional methods
+
+		DATA TYPES + syntax				SIZE (bites)		DESCRIPTION			
+		byte var = 127;  			 			1				from -128 to 127
+		short var = 13000;						2				from -32000 to 32000
+		int	var = 14000000; 					4				from -2mill to 2 mill
+		long var = 9000000000000L;				8				from -9mill to 9mill 
+		float var = 12.3467f; 					4				6 to 7 decimal numbers (You can use "e" to have an exponential exp. float var = 13.45e4f;)
+		double var = 12.39485683745d;			8				15 decimal numbers
+		boolean	var = true;						1				true or false
+		char var = "A"		 					2				stores a single character (You can use ASCII to representate)
+
+	Non-primitive data types
+		they are refer to an object
+
+		- It has always a value such as [null]
+		- they always strat with a capital letter. exp. => String, Array, Classes. etc...
+
+									JAVA CASTING AND TYPES
+
+Casting is when you assign a value to a primitive data type to another prmitive data type
+
+	Type of casting
+		Widenning => This is an Automatic process. exp
+						int myInt = 120;
+						long myLong = myInt;
+		Narrowing => This must be an Manual process.
+						long myLong = 13097L;
+						int myInt = (int) myLong;
